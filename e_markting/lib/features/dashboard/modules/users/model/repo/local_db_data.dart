@@ -70,5 +70,25 @@ address TEXT )
     // إذا كان هناك نتيجة (أي عدد الصفوف > 0) يعني العثور على المستخدم
     return result.isNotEmpty;
   }
+ Future<bool> isEmailExists(String email) async {
+    // تنفيذ الاستعلام للبحث عن المستخدم باستخدام البريد الإلكتروني وكلمة المرور
+    List<Map<String, dynamic>> result = await _database.query(
+      'user',
+      where: 'email = ?',
+      whereArgs: [email],
+    );
+
+    // إذا كان هناك نتيجة (أي عدد الصفوف > 0) يعني العثور على المستخدم
+    return result.isNotEmpty;
+  }
+    Future<void> updatePass(String pass, String email) async {
+    await _database.update(
+        'user',
+        {
+          'pass': pass,
+        },
+        where: 'email',
+        whereArgs: [email]);
+  }
 }
 

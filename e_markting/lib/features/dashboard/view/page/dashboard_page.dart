@@ -1,6 +1,9 @@
 
 import 'package:e_markting/features/dashboard/controller/dashboard_cubit.dart';
-
+import 'package:e_markting/features/dashboard/modules/cart/view/page/cart_page.dart';
+import 'package:e_markting/features/dashboard/modules/favorite/view/page/favorite_page.dart';
+import 'package:e_markting/features/dashboard/modules/product/view/page/product_page.dart';
+import 'package:e_markting/features/dashboard/modules/users/view/page/user_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
