@@ -25,7 +25,7 @@ class LoginPage extends StatelessWidget {
             ),
             bottomNavigationBar: SizedBox(
               height: context.height / 4,
-              child: BottomNavigationWiget(
+              child: BottomNavigationWidget(
                 controller: controller,
               ),
             ),

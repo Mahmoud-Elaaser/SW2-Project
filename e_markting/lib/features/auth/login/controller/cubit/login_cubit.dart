@@ -22,7 +22,7 @@ class LoginCubit extends Cubit<RegistrationState> {
   Future<void> onPressedConfirmButton(BuildContext context) async {
       var users = await (await DatabaseRepo.instance)
           .isUserExists(mailController.text, passwordController.text);
-    if (formKey.currentState!.validate()) {
+    if (formKey.currentState!.validate()&&users==true) {
       
         Navigator.pushNamed(context, 'DashbordPage', arguments: [
     mailController.text,
