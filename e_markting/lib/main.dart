@@ -23,7 +23,7 @@ MaterialApp materialApp = MaterialApp(
 
     
   runApp(  DevicePreview(
-      enabled: true,
+      enabled: false,
       builder: (context) => materialApp, // Wrap your app
     ),);
 }
